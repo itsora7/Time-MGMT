@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Form } from './components/Form';
+import { ListArea } from './components/ListArea';
+import { Title } from './components/Title';
 
 function App() {
+  const handleOnSubmit = (e) =>{
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+
+        <div className="container">
+          <Title />
+          <Form />
+          <ListArea />
+
+
+            <div className="row fw-bold">
+                <div className="col">The total hours allocated = <span id="totalhrs">0</span>hrs</div>
+            </div>
+        </div>
     </div>
   );
 }
